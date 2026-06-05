@@ -77,16 +77,6 @@ npm install
 npx playwright install chromium
 ```
 
-### 4. Create environment configuration
-Create a `.env` file in the root directory (optional, as defaults are pre-configured):
-```ini
-BASE_URL=https://www.saucedemo.com
-API_BASE_URL=https://reqres.in/api
-STANDARD_USER=standard_user
-LOCKED_USER=locked_out_user
-PASSWORD=secret_sauce
-```
-
 ---
 
 ## 🚦 Running Tests
@@ -145,3 +135,11 @@ This project is configured with **GitHub Actions**. The pipeline automatically:
 2. Installs dependencies and browser binaries.
 3. Runs the test suite in headless mode.
 4. Uploads the HTML test report and test traces as artifacts, accessible from the run's summary page.
+
+---
+
+## 📈 Execution Report Screenshot
+
+Here is the screenshot of the latest successful local test run report (37/37 passing):
+
+![Playwright Test HTML Report Screenshot](playwright-report-screenshot.png)
