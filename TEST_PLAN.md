@@ -7,7 +7,7 @@ This test plan outlines the scope, strategy, test cases, environment, risks, and
 ## 1. Objectives & Scope
 
 ### 1.1 Objectives
-* Design and implement robust, maintainable UI and API automated tests.
+* Design and implemented robust, maintainable UI and API automated tests.
 * Adhere to Page Object Model (POM) and clean-coding principles.
 * Ensure high test reliability with zero hard-coded waits and proper async/await handling.
 * Implement CI/CD integration using GitHub Actions and robust reporting.
