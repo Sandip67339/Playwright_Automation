@@ -78,4 +78,20 @@ test.describe('Checkout Tests', () => {
     expect(summaryItemCount).toBe(1);
     await expect(checkoutPage.page.locator('[data-test="inventory-item-name"]')).toHaveText(PRODUCTS.backpack);
   });
+
+  test('should cancel checkout from order summary and return to inventory', async ({
+    checkoutPage,
+  }) => {
+    await checkoutPage.fillCheckoutInfo(
+      CHECKOUT_DATA.valid.firstName,
+      CHECKOUT_DATA.valid.lastName,
+      CHECKOUT_DATA.valid.postalCode
+    );
+    await checkoutPage.continue();
+    await checkoutPage.expectOnStepTwo();
+
+    await checkoutPage.cancel();
+    await expect(checkoutPage.page).toHaveURL(/inventory\.html/);
+    await expect(checkoutPage.page.locator('[data-test="inventory-item-name"]')).toHaveCount(6);
+  });
 });
